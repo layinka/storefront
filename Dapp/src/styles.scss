@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+.text-transparent {
+    color: transparent;
+}
+
+// .striped-vest{
+//     background-color: rgba(0, 255, 255, 0.298);
+	
+// }
+.striped-vest {
+	background-color: rgba(23, 5, 147, 0.19);
+	border-top: 5px solid #1642687d;
+	border-bottom: 5px solid #1642687d;
+}
+
+.ngx-file-drop__drop-zone {
+	height: 100px;
+	margin: auto;
+	border: 2px solid #0782d0;
+	border-radius: 0px !important;
+}

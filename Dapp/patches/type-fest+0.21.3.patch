@@ -1,0 +1,9 @@
+diff --git a/node_modules/type-fest/ts41/get.d.ts b/node_modules/type-fest/ts41/get.d.ts
+index 9103e9a..94b713b 100644
+--- a/node_modules/type-fest/ts41/get.d.ts
++++ b/node_modules/type-fest/ts41/get.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import {Split} from './utilities';
+ import {StringDigit} from '../source/utilities';
+ 

@@ -1,0 +1,39 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "src/Tt.sol": {
+      "content": "// SPDX-License-Identifier: AGPL-1.0\r\npragma solidity ^0.8.10;\r\n\r\n\r\n\r\ncontract Tt  {\r\n\r\n\tstring public name;\r\n\tconstructor(string memory _name, string memory symbol)  {\r\n\t\tname=_name;\r\n\t}\r\n}\r\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200,
+      "details": {
+        "yul": true
+      }
+    },
+    "viaIR": true,
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

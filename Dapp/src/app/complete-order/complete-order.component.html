@@ -1,0 +1,86 @@
+<div class="container mt-3">
+    <div class="row">
+        <div *ngIf="loading" class="col d-flex justify-content-center align-items-center">
+            <div>Loading ...</div>
+        </div>
+        <div  class="col-12 col-md-6 mb-3" *ngIf="orderMetadata && !loading">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Pay Now</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                          <tr>
+                            <!-- <th scope="col">#</th> -->
+                            <th scope="col">Product</th>
+                            <th scope="col">Item Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let product of cart">
+                            <ng-container>
+                                <!-- <th scope="row">1</th> -->
+                                <th scope="row">
+                                    <div  class="text-center my-1">
+                                        <img [src]="product.image" alt="" class="img-fluid" style="width:100px">
+                                        
+                                    </div>
+                                    {{product.productName}}
+                                </th>
+                                <td>NGN {{product.price}}</td>
+                                <td>{{product.quantity}}</td>
+                                <td>NGN {{product.price * product.quantity }}</td>
+                            </ng-container>
+                            
+                          </tr>
+                          
+                          <tr>
+                            <th scope="row" ></th>
+                            <td> <strong class="text-end fw-bold">Total (NGN)</strong>  </td>
+                            <td> <span>NGN {{total | number:'1.0-2'}} </span>  </td>
+                            <td></td>
+                          </tr>
+ 
+                          <tr *ngIf="orderDetails"> 
+                            <th scope="row" ></th>
+                            <td> <strong class="text-end fw-bold">Total {{currency}}</strong>  </td>
+                            <td> <span> {{totalInUserCurrency | number:'1.0-2'}} </span>  </td>
+                            <td><button class="btn btn-success" (click)="pay()">Pay Now</button></td>
+                          </tr>
+
+                          
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            
+        </div>
+        <div *ngIf="!loading" class="col-12 col-md-6">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Scan to Pay</h3>
+                    <h4>or visit  </h4>
+
+                    <h5 class="mt-1 text-xs text-muted alert alert-info"><small>{{url}}</small></h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col border border-secondary-subtle m-2 p-2" >
+                            <div id="my-qr-code" ></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>

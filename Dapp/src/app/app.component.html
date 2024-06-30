@@ -1,0 +1,115 @@
+
+<nav class="navbar navbar-expand-lg bg-body-info " style="background-color: #0d6efd !important;">
+  <div class="container">
+    <a class="navbar-brand text-white" href="/">Store Front</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['create-sales-point']">Create Sales Point</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['stores']">My Sales Points</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" [routerLink]="['sell']">Sell</a>
+        </li> -->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+
+      <div class="d-flex justify-content-end align-items-center">
+
+        
+        <div class="mx-2" *ngIf="balance">Balance: {{balance.formatted | number: '0.2-4'}} {{balance.symbol}}</div>
+
+        <!-- <div class="mx-2 text-white" *ngIf="selectedNetwork"> {{selectedNetwork}} </div> -->
+
+        <!-- <select class="mx-2 " [ngModel]="selectedNetwork" (ngModelChange)="onSwitchNetwork($event)">
+          <option value="">Choose Network</option>
+          <option [value]="network.id" *ngFor="let network of networkList">
+            {{network.name}}
+          </option>
+        </select>
+
+         -->
+         
+
+
+          <button *ngIf="!w3s.account" (click)="connectCoinbaseSmartWallet()" class="mx-2" style="background: transparent; background-color: #0052FF;display: flex;align-items: center;
+            justify-content: space-between; font-family: Arial, Helvetica, sans-serif; font-weight: bold;font-size: 1rem; 
+            padding: 8px 20px 8px 14px;border-radius: 10px;color:white; margin-right: 0.3rem;">
+            <div style="padding-top: 2;">
+              <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+              >
+                  <path
+                      d="M2.66675 15.9998C2.66675 23.3628 8.63712 29.3332 16.0001 29.3332C23.363 29.3332 29.3334 23.3628 29.3334 15.9998C29.3334 8.63687 23.363 2.6665 16.0001 2.6665C8.63712 2.6665 2.66675 8.63687 2.66675 15.9998ZM12.5927 11.7035H19.4075C19.9001 11.7035 20.2964 12.0998 20.2964 12.5924V19.4072C20.2964 19.8998 19.9001 20.2961 19.4075 20.2961H12.5927C12.1001 20.2961 11.7038 19.8998 11.7038 19.4072V12.5924C11.7038 12.0998 12.1001 11.7035 12.5927 11.7035Z"
+                      fill="white"
+                  />
+              </svg>
+          </div>
+            <span class="" style="margin-left: 10px;">Connect Smart Wallet</span>
+          </button>
+         <w3m-button></w3m-button>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
+<!-- <ngx-spinner type="square-jelly-box" size = "medium"><p style="color: white" > Working... </p></ngx-spinner> -->
+<ngx-spinner type="ball-scale-multiple"><p style="color: white" > Loading... </p></ngx-spinner>
+
+<div class="container">
+  <!-- <div class="row">
+    <div class="col d-flex justify-content-center mb-3 mt-2">
+      <h3>Store Front</h3>
+    </div>
+  </div> -->
+
+  <div class="row">
+
+    <!-- <div class="col-12">
+      <button class="btn btn-primary m-2 p-2" (click)="test()">
+        Test
+      </button>
+
+      <span class="ps-2 ms-2 bg-dark text-white">
+        {{celoBalance}}
+      </span>
+    </div> -->
+    
+    <!-- <div class="col-12" style="height:360px">
+      <div id="my-qr-code"></div>
+    </div> -->
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+

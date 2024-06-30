@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col col-md-9">
+            <div class="card my-4">
+                <div class="card-body">
+                    <div class="text-center m-2 p-3">
+                        <h2 ><i class="bi bi-check-circle-fill text-success"></i></h2>
+                        <h4>Order Completed</h4>
+                        <h4 >
+                            <a *ngIf="!blockExplorerUrl" href="https://explorer.testnet.dev/token/{{nftAddress}}/token-transfers" target="_blank">View NFT Receipt</a>
+                            
+                            <a *ngIf="blockExplorerUrl" [href]="blockExplorerUrl" target="_blank">View NFT Receipt</a>
+                        </h4>
+
+                    </div>
+
+                    <div class="card my-2">
+                        <div class="card-body mx-2 px-2">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <!-- <img class="img-fluid" src="https://picsum.photos/id/20/100/100" alt=""> -->
+                                </div>
+                                <h4 *ngIf="orderMetadata"><b class="text-end">Created:</b> {{orderMetadata.date | date:'MMM dd, yyyy'}}  </h4>
+        
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <h3 class="fw-bold" *ngIf="storeName">{{storeName}}</h3>
+                                </div>
+                                <h4 *ngIf="tokenReceiptId"><b class="text-end">Receipt Id:</b> #{{tokenReceiptId}} </h4>
+        
+                            </div>
+
+                            <table class="table table-striped" *ngIf="cart">
+                                <thead>
+                                  <tr>
+                                    <!-- <th scope="col">#</th> -->
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Item Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Total</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let product of cart">
+                                    <ng-container>
+                                        <!-- <th scope="row">1</th> -->
+                                        <th scope="row">
+                                            <div  class="text-center my-1">
+                                                <img [src]="product.image" alt="" class="img-fluid" style="width:100px">
+                                                
+                                            </div>
+                                            {{product.productName}}
+                                        </th>
+                                        <td>NGN {{product.price}}</td>
+                                        <td>{{product.quantity}}</td>
+                                        <td>NGN {{product.price * product.quantity }}</td>
+                                    </ng-container>
+                                    
+                                  </tr>
+                                  
+                                  <tr>
+                                    <th scope="row" ></th>
+                                    <td> <strong class="text-end fw-bold">Total (NGN)</strong>  </td>
+                                    <td> <span>NGN {{total | number:'1.0-2'}} </span>  </td>
+                                    <td></td>
+                                  </tr>
+         
+                                  <tr *ngIf="orderDetails"> 
+                                    <th scope="row" colspan="2" ></th>
+                                    <td> <strong class="text-end fw-bold">Total {{currency}}</strong>  </td>
+                                    <td> <span> {{totalInUserCurrency | number:'1.0-2'}} </span>  </td>
+                                    
+                                  </tr>
+        
+                                  
+                                </tbody>
+                            </table>
+
+
+        
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

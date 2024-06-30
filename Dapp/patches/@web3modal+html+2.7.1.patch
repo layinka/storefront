@@ -1,0 +1,9 @@
+diff --git a/node_modules/@web3modal/html/dist/_types/src/client.d.ts b/node_modules/@web3modal/html/dist/_types/src/client.d.ts
+index fe02a06..a04c11a 100644
+--- a/node_modules/@web3modal/html/dist/_types/src/client.d.ts
++++ b/node_modules/@web3modal/html/dist/_types/src/client.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import type { ConfigCtrlState, ThemeCtrlState } from '@web3modal/core';
+ import type { EthereumClient } from '@web3modal/ethereum';
+ /**

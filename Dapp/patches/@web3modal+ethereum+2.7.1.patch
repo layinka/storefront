@@ -1,0 +1,18 @@
+diff --git a/node_modules/@web3modal/ethereum/dist/_types/src/client.d.ts b/node_modules/@web3modal/ethereum/dist/_types/src/client.d.ts
+index 4ce3dee..085d5c8 100644
+--- a/node_modules/@web3modal/ethereum/dist/_types/src/client.d.ts
++++ b/node_modules/@web3modal/ethereum/dist/_types/src/client.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import type { Chain, Connector } from '@wagmi/core';
+ import { disconnect, fetchBalance, fetchEnsAvatar, fetchEnsName, getAccount, getNetwork, switchNetwork, watchAccount, watchNetwork } from '@wagmi/core';
+ import type { ConnectorId } from './types';
+diff --git a/node_modules/@web3modal/ethereum/dist/_types/src/utils.d.ts b/node_modules/@web3modal/ethereum/dist/_types/src/utils.d.ts
+index 73e1d47..27047d5 100644
+--- a/node_modules/@web3modal/ethereum/dist/_types/src/utils.d.ts
++++ b/node_modules/@web3modal/ethereum/dist/_types/src/utils.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import { WalletConnectConnector } from '@wagmi/core/connectors/walletConnect';
+ import type { Chain } from '@wagmi/core';
+ import { InjectedConnector } from '@wagmi/core';

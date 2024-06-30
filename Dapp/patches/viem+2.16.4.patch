@@ -1,0 +1,54 @@
+diff --git a/node_modules/viem/_types/clients/decorators/public.d.ts b/node_modules/viem/_types/clients/decorators/public.d.ts
+index 246516d..9b72e84 100644
+--- a/node_modules/viem/_types/clients/decorators/public.d.ts
++++ b/node_modules/viem/_types/clients/decorators/public.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import type { Abi, AbiEvent, Address } from 'abitype';
+ import { type GetEnsAddressParameters, type GetEnsAddressReturnType } from '../../actions/ens/getEnsAddress.js';
+ import { type GetEnsAvatarParameters, type GetEnsAvatarReturnType } from '../../actions/ens/getEnsAvatar.js';
+diff --git a/node_modules/viem/_types/clients/decorators/wallet.d.ts b/node_modules/viem/_types/clients/decorators/wallet.d.ts
+index d7fa58c..e359277 100644
+--- a/node_modules/viem/_types/clients/decorators/wallet.d.ts
++++ b/node_modules/viem/_types/clients/decorators/wallet.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import type { Abi, Address, TypedData } from 'abitype';
+ import type { Account } from '../../accounts/types.js';
+ import { type GetChainIdReturnType } from '../../actions/public/getChainId.js';
+diff --git a/node_modules/viem/_types/types/utils.d.ts b/node_modules/viem/_types/types/utils.d.ts
+index 71d326c..f334652 100644
+--- a/node_modules/viem/_types/types/utils.d.ts
++++ b/node_modules/viem/_types/types/utils.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ declare const symbol: unique symbol;
+ /**
+  * Creates a branded type of {@link T} with the brand {@link U}.
+diff --git a/node_modules/viem/_types/utils/formatters/transaction.d.ts b/node_modules/viem/_types/utils/formatters/transaction.d.ts
+index e175bc6..2beb38d 100644
+--- a/node_modules/viem/_types/utils/formatters/transaction.d.ts
++++ b/node_modules/viem/_types/utils/formatters/transaction.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import type { ErrorType } from '../../errors/utils.js';
+ import type { BlockTag } from '../../types/block.js';
+ import type { Chain } from '../../types/chain.js';
+diff --git a/node_modules/viem/_types/utils/formatters/transactionRequest.d.ts b/node_modules/viem/_types/utils/formatters/transactionRequest.d.ts
+index 4b5560e..ba76638 100644
+--- a/node_modules/viem/_types/utils/formatters/transactionRequest.d.ts
++++ b/node_modules/viem/_types/utils/formatters/transactionRequest.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import type { ErrorType } from '../../errors/utils.js';
+ import type { Chain, ExtractChainFormatterParameters } from '../../types/chain.js';
+ import type { ByteArray } from '../../types/misc.js';
+diff --git a/node_modules/viem/_types/zksync/types/transaction.d.ts b/node_modules/viem/_types/zksync/types/transaction.d.ts
+index 868786a..c7fe678 100644
+--- a/node_modules/viem/_types/zksync/types/transaction.d.ts
++++ b/node_modules/viem/_types/zksync/types/transaction.d.ts
+@@ -1,3 +1,4 @@
++//@ts-nocheck
+ import type { Address } from 'abitype';
+ import type { FeeValuesEIP1559 } from '../../types/fee.js';
+ import type { Hash, Hex } from '../../types/misc.js';

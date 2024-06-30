@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col col-md-9 p-2">
+
+            <div style="height: 75vh;" class="text-center d-flex justify-content-center align-items-center" *ngIf="stores && stores.length<1">
+                <a class="btn btn-primary px-3 mx-3 py-2 " [routerLink]="['create-sales-point']">Create</a>  your First Sales Point
+            </div>
+
+            <table class="table table-hover table-striped my-4" *ngIf="stores && stores.length>0">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Store Name</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                  <!-- <tr *ngFor="let store of stores; let ix=index;">
+                    
+                    <th scope="row" class="text-wrap text-break">{{ix + 1}}</th>
+                    <td> {{store}}</td>
+                    <td><a [routerLink]="['/sell', store]">Sell</a></td>
+                    
+                    
+                  </tr> -->
+
+                  <tr store-list-item *ngFor="let store of stores; let ix=index;" [index]="ix" [posAddress]="store"></tr>
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<th scope="row" class="text-wrap text-break">{{index + 1}}</th>
+<td > 
+    <ng-container class="text-center" *ngIf="!storeName">...</ng-container>
+    <ng-container *ngIf="storeName">{{storeName}}</ng-container> 
+</td>
+<td><a [routerLink]="['/sell', posAddress]">Sell</a></td>
