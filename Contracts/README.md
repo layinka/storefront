@@ -1,6 +1,6 @@
 # StoreFront POS Contracts
 
-## Boilerplate for ethereum solidity smart contract development
+## Boilerplate for  solidity smart contract development
 
 ## INSTALL
 

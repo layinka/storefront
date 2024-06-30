@@ -1,6 +1,6 @@
 # StoreFront POS
 
-## Crypto Payment Point of Sale Platform on the Celo Chain
+## Crypto Payment Point of Sale Platform
 
 ## Introduction
 
